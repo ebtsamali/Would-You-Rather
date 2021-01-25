@@ -1,0 +1,27 @@
+
+.questions {
+	display: flex;
+	flex-direction: column;
+}
+
+.questions-options {
+	display: flex;
+	background-color: #e6e6e6;
+}
+
+.questions-options button {
+	font-size: 18px;
+	border-radius: 0;
+	border: solid 1px #d9d9d9;
+}
+
+.other-option {
+	border: none;
+	background-color: white;
+}
+
+.active-option {
+	background-color: #e6e6e6;
+	color: #71dada;
+	font-weight: bold;
+}

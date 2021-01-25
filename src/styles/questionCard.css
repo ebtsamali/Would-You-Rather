@@ -1,0 +1,24 @@
+
+.question-card {
+	width: 100%;
+	border: solid 1px #d9d9d9;
+}
+
+.card-question-content p {
+	text-align: left;
+	padding-top: 10px;
+}
+
+.poll-link {
+	display: block;
+	width: 92%;
+	height: 25px;
+	border: solid 2px #71dada;
+	border-radius: 5px;
+	text-align: center;
+	font-size: large;
+	font-weight: bold;
+	color: #71dada;
+	margin: 20px 0 0;
+	padding-top: 5px;
+}

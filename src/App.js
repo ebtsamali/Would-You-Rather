@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, Fragment } from 'react';
+import { connect } from 'react-redux';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import AuthRoute from './utils/AuthRoute';
+import { handleInitialData } from './actions/shared';
+import LoadingBar from 'react-redux-loading';
+import Nav from './components/Nav';
+import Login from './components/Login';
+import Questions from './components/Questions';
+import LeaderBoared from './components/LeaderBoared';
+import Question from './components/Question';
+import NewQuestion from './components/NewQuestion';
+import NotFound from './components/NotFound';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+
+	componentDidMount () {
+		this.props.dispatch(handleInitialData());
+	}
+
+	render () {
+		return (
+			<Router>
+				<Fragment>
+					<Nav />
+					<LoadingBar />
+					<Switch>
+						<AuthRoute path='/' exact component={Questions} />
+						<AuthRoute path='/add' exact component={NewQuestion} /> 
+						<AuthRoute path='/leaderboard' exact component={LeaderBoared} /> 
+						<AuthRoute path='/questions/:question_id' exact component={Question} />
+						<Route path='/login' exact component={Login} /> 
+						<Route component={NotFound} /> 
+					</Switch>
+				</Fragment>
+			</Router>
+		);
+	}
 }
 
-export default App;
+export default connect()(App);

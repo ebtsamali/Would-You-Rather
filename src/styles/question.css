@@ -1,0 +1,47 @@
+
+.option-input {
+	margin-top: 15px;
+}
+
+.option-card {
+	width: 90%;
+	border: solid 1.5px #71dada;
+	border-radius: 5px;
+	margin-top: 15px;
+	padding-left: 20px;
+	background-color: rgb(250, 248, 248);
+}
+
+.option-card h4 {
+	margin-top: 10px;
+}
+
+.option-card p {
+	text-align: center;
+}
+
+.option-card meter {
+	width: 90%;
+	height: 40px;
+}
+
+meter::-webkit-meter-optimum-value {
+	background: #71dada;
+}
+meter::-moz-meter-bar { /* Firefox Pseudo Class */
+	background: #71dada;
+}
+
+.user-vote {
+	width: 80px;
+	height: 22px;
+	float: right;
+	background-color: rgb(204, 154, 60);
+	border: solid 1px rgb(146, 98, 9);
+	border-bottom-left-radius: 25px;
+	border-top-left-radius: 25px;
+	color: white;
+	padding-top: 0 !important;
+	margin-top: -20px;
+	border-right: none;
+}

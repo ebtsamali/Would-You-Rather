@@ -1,0 +1,64 @@
+
+
+.login-card-header {
+	width: 100%;
+	min-height: 60px;
+	background-color: #e6e6e6;
+	margin: 0;
+}
+
+.login-card-header h3, p {
+	margin: 0;
+	padding-top: 5px;
+	text-align: center;
+}
+
+.login-card-body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 10px 0;
+}
+
+.app-logo {
+	height: 120px;
+	width: 120px;
+	margin: 40px auto 0;
+	border-radius: 30px;
+}
+
+.login-card-body h2 {
+	text-align: center;
+	color: #71dada;
+}
+
+.login-form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.login-form .user-select, button {
+	width: 90%;
+	height: 35px;
+	border-radius: 5px;
+}
+
+.login-form .user-select:focus, button:focus {
+	outline: none;
+}
+
+/* .login-form .user-select {
+	border: solid 1px #d9d9d9;
+	background-color: white;
+} */
+
+.login-form button {
+	background-color: #71dada;
+	border: solid 1px #71dada;
+	color: white;
+	font-size: larger;
+	margin-top: 10px;
+	cursor: pointer;
+}
