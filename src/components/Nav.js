@@ -7,8 +7,9 @@ import '../styles/nav.css';
 class Nav extends Component {
 
 	handleLogout = () => {
-		const { handleRemoveAuthedUser } = this.props;
+		const { handleRemoveAuthedUser, history } = this.props;
 		handleRemoveAuthedUser();
+		history.replace('/login');
 	}
 
 	render () {

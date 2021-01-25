@@ -24,14 +24,16 @@ class Login extends Component {
 	*/
 	handleSubmit = e => {
 		e.preventDefault();
-		const { handleLogin, history } = this.props;
+		const { handleLogin, history, location } = this.props;
+		const requestedURL = location.state ? location.state.requestedURL : '/';
 		const { selectedUser } = this.state;
 		handleLogin(selectedUser.value);
-		history.replace('/');
+		history.replace(requestedURL);
 	}
 
 	render () {
 		const { users } = this.props;
+		console.log(this.props);
 
 		/**
 		* @description map on users to set select input options
@@ -52,14 +54,6 @@ class Login extends Component {
 				</Option>
 			)
 		}
-		// const ValueOption = (props) => {
-		// 	console.log(props);
-		// 	return (
-		// 		<SingleValue {...props}> 
-		// 				<p>{props.data.label}</p>
-		// 		</SingleValue> 
-		// 	);
-		// }
 
 		return (
 			<div className="container login">
