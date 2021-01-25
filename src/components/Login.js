@@ -33,7 +33,6 @@ class Login extends Component {
 
 	render () {
 		const { users } = this.props;
-		console.log(this.props);
 
 		/**
 		* @description map on users to set select input options

@@ -14,6 +14,7 @@ class Nav extends Component {
 
 	render () {
 		const { authedUser } = this.props;
+
 		return (
 			<nav className='nav'>
 				<ul>
@@ -50,10 +51,14 @@ const mapStateToProps = ({authedUser, users}) => {
 	}
 }
 
-const mapDispatchToProps = dispatch => {
-	return {
-		handleRemoveAuthedUser: () => dispatch(removeAuthedUser())
-	}
+// const mapDispatchToProps = dispatch => {
+// 	return {
+// 		handleRemoveAuthedUser: () => dispatch(removeAuthedUser())
+// 	}
+// }
+
+const mapDispatchToProps = {
+	handleRemoveAuthedUser: removeAuthedUser,
 }
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Nav));

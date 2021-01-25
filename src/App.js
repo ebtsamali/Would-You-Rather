@@ -16,7 +16,7 @@ import NotFound from './components/NotFound';
 class App extends Component {
 
 	componentDidMount () {
-		this.props.dispatch(handleInitialData());
+		this.props.handleInitialData();
 	}
 
 	render () {
@@ -39,4 +39,8 @@ class App extends Component {
 	}
 }
 
-export default connect()(App);
+const mapDispatchToProps = {
+	handleInitialData,
+}
+
+export default connect(null, mapDispatchToProps)(App);
